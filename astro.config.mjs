@@ -1,0 +1,7 @@
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://natvpsi.github.io',
+  base: '/site-psicologa-natalia-veber',
+});

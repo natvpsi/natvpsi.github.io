@@ -1,0 +1,113 @@
+<header class="site-header">
+  <a href="/" class="brand">
+    <span class="brand-name">Natalia</span>
+    <span class="brand-description">Psicóloga</span>
+  </a>
+
+  <nav class="navigation" aria-label="Navegação principal">
+    <a href="#sobre">Quem sou</a>
+    <a href="#abordagem">Como trabalho</a>
+    <a href="#reflexoes">Reflexões</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+<a
+  href="https://wa.me/554799699634?text=Olá%2C%20Natalia.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+  class="header-button"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+    Conversar
+  </a>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 1.4rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(239, 233, 221, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+
+  .brand-description {
+    color: #3a6d5e;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navigation a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.25s ease;
+  }
+
+  .navigation a:hover {
+    color: #3a6d5e;
+  }
+
+  .header-button {
+    padding: 0.75rem 1.2rem;
+    border-radius: 999px;
+    background: #3a6d5e;
+    color: #efe9dd;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: transform 0.25s ease;
+  }
+
+  .header-button:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 800px) {
+    .navigation {
+      display: none;
+    }
+
+    .site-header {
+      padding: 1.2rem 6%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .header-button {
+      display: none;
+    }
+
+    .brand {
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+  }
+</style>
