@@ -981,4 +981,48 @@
   transform: none;
 }
 
+.story-section {
+  display: block;
+  padding: 4rem 6%;
+  min-height: auto;
+}
+
+.story-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.story-label p {
+  writing-mode: initial;
+  margin: 0;
+}
+
+.story-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.story-content h2 {
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(2.6rem, 12vw, 3.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.story-content h2 span {
+  display: inline;
+}
+
+.story-text {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
 }	
