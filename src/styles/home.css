@@ -943,4 +943,42 @@
     padding-right: 0;
   }
 
+ .approach-section {
+  padding: 6rem 6%;
+}
+
+.system-map {
+  margin-top: 4rem;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.system-map strong {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  width: 120px;
+  height: 120px;
+  font-size: 1.1rem;
+}
+
+.system-map span {
+  position: static;
+  transform: none !important;
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+.system-map span:nth-child(1),
+.system-map span:nth-child(2),
+.system-map span:nth-child(3),
+.system-map span:nth-child(4) {
+  transform: none;
+}
+
 }	
