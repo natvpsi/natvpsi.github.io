@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://natvpsi.github.io/site-psicologa-natalia-veber/sitemap-index.xml
