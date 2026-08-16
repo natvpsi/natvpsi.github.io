@@ -1,25 +1,62 @@
+```astro
 <header class="site-header">
   <a href="/" class="brand">
     <span class="brand-name">Natalia</span>
     <span class="brand-description">Psicóloga</span>
   </a>
 
-  <nav class="navigation" aria-label="Navegação principal">
+  <button
+    class="mobile-menu-button"
+    type="button"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="main-navigation"
+  >
+    Menu ☰
+  </button>
+
+  <nav
+    id="main-navigation"
+    class="navigation"
+    aria-label="Navegação principal"
+  >
     <a href="#sobre">Quem sou</a>
     <a href="#abordagem">Como trabalho</a>
     <a href="#reflexoes">Reflexões</a>
     <a href="#contato">Contato</a>
   </nav>
 
-<a
-  href="https://wa.me/554799699634?text=Olá%2C%20Natalia.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
-  class="header-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
+  <a
+    href="https://wa.me/554799699634?text=Olá%2C%20Natalia.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+    class="header-button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Conversar
   </a>
 </header>
+
+<script>
+  const menuButton = document.querySelector(".mobile-menu-button");
+  const navigation = document.querySelector(".navigation");
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("navigation-open");
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "Fechar ✕" : "Menu ☰";
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("navigation-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "Menu ☰";
+      });
+    });
+  }
+</script>
 
 <style>
   .site-header {
@@ -90,24 +127,58 @@
     transform: translateY(-2px);
   }
 
-  @media (max-width: 800px) {
-    .navigation {
-      display: none;
-    }
-
-    .site-header {
-      padding: 1.2rem 6%;
-    }
+  .mobile-menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: #000;
+    font: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
+    .site-header {
+      padding: 1.2rem 6%;
+      flex-wrap: wrap;
+    }
+
+    .mobile-menu-button {
+      display: block;
+      margin-left: auto;
+    }
+
     .header-button {
       display: none;
     }
 
+    .navigation {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 1.5rem 0 0.5rem;
+    }
+
+    .navigation.navigation-open {
+      display: flex;
+    }
+
+    .navigation a {
+      width: 100%;
+      padding: 1rem 0;
+      font-size: 1.05rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
     .brand {
       flex-direction: column;
+      align-items: flex-start;
       gap: 0.1rem;
     }
   }
 </style>
+```
