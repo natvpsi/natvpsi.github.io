@@ -1,12 +1,10 @@
- 
-  :global(body) {
+:global(body) {
     margin: 0;
     background: #efe9dd;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
   }
-
-  .hero {
+.hero {
   position: relative;
   min-height: 100vh;
   padding: 10rem 7% 7rem;
@@ -17,14 +15,12 @@
   overflow: hidden;
   background: #f8f1e4;
 }
-
- .eyebrow {
+.eyebrow {
   margin: 0 0 2.4rem;
   color: #315d91;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
 }
-
 .hero h1 {
   max-width: 760px;
   margin: 0;
@@ -50,7 +46,6 @@
   color: #fff7e8;
   border-radius: 0.08em;
 }
-
 .intro {
   max-width: 650px;
   margin: 3rem 0 0;
@@ -318,8 +313,7 @@
 .story-text p + p {
   margin-top: 1.5rem;
 }
-
-  @media (max-width: 700px) {
+@media (max-width: 700px) {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
@@ -366,6 +360,13 @@
     top: 75px;
   }
 }
+
+@media (max-width: 800px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 7rem 7%;
+    gap: 3rem;
+  }
 
   .about-number {
     padding-top: 0;
@@ -1112,4 +1113,4 @@
   margin-top: 2rem;
 }
 
-}	
+}
