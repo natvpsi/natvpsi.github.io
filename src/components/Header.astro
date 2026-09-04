@@ -1,8 +1,11 @@
-
 <header class="site-header">
   <a href="/" class="brand">
-    <span class="brand-name">Natalia</span>
-    <span class="brand-description">Psicóloga</span>
+    <span class="brand-symbol">✿</span>
+
+    <span class="brand-text">
+      <span class="brand-name">Natt!</span>
+      <span class="brand-description">Psicóloga</span>
+    </span>
   </a>
 
   <button
@@ -61,31 +64,44 @@
     align-items: center;
     justify-content: flex-start;
 
-    background: rgba(239, 233, 221, 0.88);
+    background: rgba(248, 241, 228, 0.96);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  .brand {
-    display: flex;
-    align-items: baseline;
-    gap: 0.65rem;
-    color: #000;
-    text-decoration: none;
-  }
+ .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #315d91;
+  text-decoration: none;
+}
 
-  .brand-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-  }
+.brand-symbol {
+  color: #ef5d62;
+  font-size: 2rem;
+  line-height: 1;
+}
 
-  .brand-description {
-    color: #3a6d5e;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.brand-name {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.brand-description {
+  color: #ef5d62;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
 
  .navigation {
   display: flex;
@@ -98,15 +114,15 @@
   }
 
   .navigation a {
-    color: #000;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.25s ease;
-  }
+  color: #173c66;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
 
-  .navigation a:hover {
-    color: #3a6d5e;
-  }
+.navigation a:hover {
+  color: #ef5d62;
+}
 
   .header-button {
     padding: 0.75rem 1.2rem;
