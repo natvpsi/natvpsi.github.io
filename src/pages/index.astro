@@ -2,451 +2,452 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/home.css";
-
-const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="pt-BR">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="/favicon.png"
-  />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <title>Psicóloga em Campo Largo e Curitiba | Natalia Veber</title>
+    <title>Psicóloga em Campo Largo e Curitiba | Natalia Veber</title>
 
-  <meta
-    name="description"
-    content="Psicóloga Natalia Veber, CRP 08/49156. Psicoterapia presencial em Campo Largo e Curitiba para crianças a partir de 10 anos, adolescentes e adultos."
-  />
+    <meta
+      name="description"
+      content="Psicóloga Natalia Veber, CRP 08/49156. Psicoterapia presencial e on-line para crianças a partir de 10 anos, adolescentes e adultos."
+    />
 
-  <meta
-    property="og:title"
-    content="Psicóloga Natalia Veber | Campo Largo e Curitiba"
-  />
+    <meta
+      property="og:title"
+      content="Psicóloga Natalia Veber | Campo Largo e Curitiba"
+    />
+    <meta
+      property="og:description"
+      content="Psicoterapia presencial e on-line para crianças a partir de 10 anos, adolescentes e adultos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://natvpsi.github.io/" />
+    <meta
+      property="og:image"
+      content="https://natvpsi.github.io/images/natalia-veber.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <meta
-    property="og:description"
-    content="Psicoterapia presencial para crianças a partir de 10 anos, adolescentes e adultos."
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:url"
-    content="https://natvpsi.github.io/"
-  />
-
-  <meta
-    property="og:image"
-    content="https://natvpsi.github.io/images/natalia-veber.jpg"
-  />
-
-  <meta name="twitter:card" content="summary_large_image" />
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Psicóloga Natalia Veber",
-  "url": "https://natvpsi.github.io/",
-"image": "https://natvpsi.github.io/images/natalia-veber.jpg",
-  "telephone": "+55 47 9969-9634",
-  "description": "Psicoterapia para crianças a partir de 10 anos, adolescentes e adultos.",
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Campo Largo"
-    },
-    {
-      "@type": "City",
-      "name": "Curitiba"
-    }
-  ]
-})}></script>
-</head>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Psicóloga Natalia Veber",
+      "url": "https://natvpsi.github.io/",
+      "image": "https://natvpsi.github.io/images/natalia-veber.jpg",
+      "description": "Psicoterapia para crianças a partir de 10 anos, adolescentes e adultos.",
+      "areaServed": [
+        { "@type": "City", "name": "Campo Largo" },
+        { "@type": "City", "name": "Curitiba" }
+      ]
+    })}></script>
+  </head>
 
   <body>
     <Header />
 
     <main>
-     <section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">
-      Psicóloga em Campo Largo e Curitiba • On-line • Abordagem Sistêmica
-    </p>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">
+            Psicóloga em Campo Largo e Curitiba • On-line • Abordagem Sistêmica
+          </p>
 
-    <h1>
-      Existe uma diferença
-      <span class="hero-blue">entre ouvir e</span>
-      <span class="hero-highlight">realmente escutar.</span>
-    </h1>
+          <h1>
+            <span>Existe uma</span>
+            <span>diferença</span>
+            <span>entre ouvir e</span>
+            <span class="hero-highlight">realmente escutar.</span>
+          </h1>
 
-    <p class="intro">
-      Algumas histórias precisam de um lugar seguro antes de encontrarem
-      respostas. Um espaço para pensar junto, sem pressa e sem julgamento,
-      sobre aquilo que ainda não tem nome.
-    </p>
+          <p class="intro">
+            Algumas histórias precisam de um lugar seguro antes de encontrarem
+            respostas. Um espaço para pensar junto, sem pressa e sem julgamento,
+            sobre aquilo que ainda não tem nome.
+          </p>
 
-    <div class="hero-actions">
-      <a href="#sobre" class="button">
-        Conheça meu trabalho →
-      </a>
-
-      <a href="#atendimento" class="hero-link">
-        Como funciona a terapia
-      </a>
-    </div>
-  </div>
-
-  <div class="hero-shape" aria-hidden="true">
-  <img src="/images/flor-petalas.png" alt="" />
-</div>
-</section>
-
-      <section id="sobre" class="story-section">
-  <div class="story-label">
-    <span>01</span>
-    <p>Escutar</p>
-  </div>
-
-  <div class="story-content">
-    <p class="chapter">
-      Existe uma história antes da dor.
-    </p>
-
-    <h2>
-      O que aparece hoje
-      <span> nem sempre começou hoje. </span>
-    </h2>
-
-    <div class="story-text">
-      <p>
-        Meu trabalho parte da ideia de que a dor sempre conversa com
-        histórias, vínculos, ausências e contextos.
-      </p>
-
-      <p>
-        O que aparece hoje não começou necessariamente hoje. Por isso,
-        compreender uma pessoa também é olhar para a história que existe
-        por trás daquilo que ela sente.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="quem-sou" class="about-section">
-  <div class="about-number">
-    <span>02</span>
-	 <p class="about-label">Quem está aqui</p>
-
-  </div>
-
-  <div class="about-image">
-
-  <img
-    src="/images/natalia-veber.jpg"
-    alt="Psicóloga Natalia Veber, atendimento on-line e  em Campo Largo e Curitiba"
-    class="about-photo"
-  />
-</div>
-
-  <div class="about-content">
-
-    <h2>
-      Antes de ser uma profissional,
-      <span> existe uma pessoa escutando outra pessoa. </span>
-    </h2>
-
-    <p>
-      A psicoterapia pode ser um espaço para olhar para aquilo que
-      muitas vezes parece difícil demais de compreender sozinho.
-    </p>
-
-    <p>
-      Não acredito em respostas prontas. Acredito em construir,
-      junto com cada pessoa, um espaço onde seja possível olhar
-      para a própria história com mais cuidado.
-    </p>
-
-    <div class="about-details">
-  <span>CRP 08/49156</span>
-  <span>Atendimento On-line e presencial</span>
-  <span>Crianças a partir de 10 anos • Adolescentes • Adultos</span>
-</div>
-
-    <a href="#contato" class="about-button">
-      Conheça meu trabalho
-    </a>
-  </div>
-</section>
-
-<section id="abordagem" class="approach-section">
-  <div class="approach-top">
-    <p class="approach-number">03</p> <p class="approach-label">Como trabalho</p>
-  </div>
-
-  <div class="approach-grid">
-    <div class="approach-title">
-      <h2>
-        A dor não acontece
-        <span> fora de contexto. </span>
-      </h2>
-    </div>
-
-    <div class="approach-text">
-      <p class="approach-highlight">
-        Na abordagem sistêmica, aquilo que uma pessoa sente não é visto de forma isolada.
-      </p>
-
-      <p>
-        Histórias, vínculos, relações familiares, experiências e contextos também fazem parte da maneira como compreendemos o que está acontecendo.
-      </p>
-
-      <p>
-        Isso não significa procurar culpados. Significa ampliar o olhar para compreender como determinadas experiências foram sendo construídas ao longo da vida.
-      </p>
-    </div>
-  </div>
-
-  <div class="system-map">
-    <span>história</span>
-    <span>vínculos</span>
-    <span>relações</span>
-    <span>contexto</span>
-    <strong>você</strong>
-  </div>
-</section>
-
-<section id="atendimento" class="care-section">
-  <div class="care-side-label">
-    <span>04</span>
-    <p>Atendimento</p>
-  </div>
-
-  <div class="care-content">
-    <p class="care-label">Como funciona</p>
-
-    <h2>
-      Um espaço para começar <span>no seu tempo.</span>
-    </h2>
-
-    <p class="care-intro">
-      A psicoterapia é construída encontro por encontro. Não é preciso chegar
-      sabendo exatamente o que dizer ou por onde começar.
-    </p>
-
-    <div class="care-grid">
-      <article>
-        <span>01</span>
-        <h3>Primeiro contato</h3>
-        <p>
-          Você pode entrar em contato para tirar dúvidas e entender melhor como
-          funciona o atendimento.
-        </p>
-      </article>
-
-      <article>
-        <span>02</span>
-        <h3>Primeira sessão</h3>
-        <p>
-          É um primeiro espaço de escuta para compreender o que está trazendo
-          você até a psicoterapia neste momento.
-        </p>
-      </article>
-
-      <article>
-        <span>03</span>
-        <h3>Continuidade</h3>
-        <p>
-          A frequência e o processo são construídos de acordo com as
-          necessidades de cada pessoa.
-        </p>
-      </article>
-    </div>
-
-    <div class="care-location">
-      <p>Atendimento on-line e presencial</p>
-      <strong>Campo Largo • Curitiba</strong>
-    </div>
-  </div>
-</section>
-
-<section id="reflexoes" class="journal-section">
-  <div class="journal-side-label">
-    <span>05</span>
-    <p>Reflexões</p>
-  </div>
-
-  <div class="journal-content">
-    <div class="journal-heading">
-      <p class="journal-label">Textos para ficar um pouco</p>
-
-      <h2>
-        Algumas coisas precisam <span>ser pensadas com calma.</span>
-      </h2>
-    </div>
-
-    <div class="journal-grid">
-      <article class="journal-card journal-card-featured">
-        <div class="journal-card-image"></div>
-
-        <div class="journal-card-meta">
-          <span>Relacionamentos</span>
-          <span>6 min de leitura</span>
+          <div class="hero-actions">
+            <a href="#quem-sou" class="button">Conheça meu trabalho →</a>
+            <a href="#atendimento" class="hero-link">Como funciona a terapia</a>
+          </div>
         </div>
 
-        <h3>
-          Existe uma diferença entre ouvir e realmente escutar.
-        </h3>
+        <div class="hero-art" aria-hidden="true">
+          <img src="/images/flor-hero.png" alt="" class="hero-flower" />
+        </div>
+      </section>
 
-        <p>
-          Nem sempre o que falta em uma conversa é resposta. Às vezes, falta
-          espaço para que aquilo que sentimos consiga realmente existir.
-        </p>
-
-      </article>
-
-      <article class="journal-card">
-        <div class="journal-card-image journal-card-image-blue"></div>
-
-        <div class="journal-card-meta">
-          <span>Ansiedade</span>
-          <span>5 min de leitura</span>
+      <section id="escutar" class="story-section">
+        <div class="story-heading">
+          <p class="section-number">01</p>
+          <p class="section-label">Escutar</p>
+          <p class="story-kicker">Existe uma história antes da dor</p>
         </div>
 
-        <h3>
-          Quando a mente não encontra um lugar para descansar.
-        </h3>
+        <div class="story-grid">
+          <div class="story-copy">
+            <h2>
+              O que aparece hoje
+              <em>nem sempre começou hoje.</em>
+            </h2>
 
-        <p>
-          A ansiedade nem sempre aparece como medo. Às vezes ela se esconde
-          na pressa, no excesso de pensamentos e na dificuldade de parar.
-        </p>
+            <p>
+              Meu trabalho parte da ideia de que a dor sempre conversa com
+              histórias, vínculos, ausências e contextos.
+            </p>
 
-      </article>
+            <p>
+              O que aparece hoje não começou necessariamente hoje. Por isso,
+              compreender uma pessoa também é olhar para a história que existe
+              por trás daquilo que ela sente.
+            </p>
+          </div>
 
-      <article class="journal-card">
-        <div class="journal-card-image journal-card-image-coral"></div>
-
-        <div class="journal-card-meta">
-          <span>Autoconhecimento</span>
-          <span>7 min de leitura</span>
+          <aside class="story-note">
+            <span class="story-tape" aria-hidden="true"></span>
+            <p>
+              É por isso que escutar, para mim, nunca é um ponto de partida
+              neutro. É um convite para olhar com mais cuidado para o que já
+              estava ali, esperando espaço.
+            </p>
+            <p>
+              Cada processo é construído no ritmo de quem o vive, não no ritmo
+              do que se espera dele.
+            </p>
+          </aside>
         </div>
 
-        <h3>
-          Nem tudo o que se repete acontece por acaso.
-        </h3>
+        <span class="story-orbit story-orbit-a" aria-hidden="true"></span>
+        <span class="story-orbit story-orbit-b" aria-hidden="true"></span>
+        <img
+          src="/images/flor-hero.png"
+          alt=""
+          class="story-flower"
+          aria-hidden="true"
+        />
+      </section>
 
-        <p>
-          Alguns padrões parecem familiares porque, de alguma forma, fazem
-          parte da história que aprendemos a viver.
-        </p>
+      <section id="quem-sou" class="about-section">
+        <div class="about-heading">
+          <p class="section-number">02</p>
+          <p class="section-label">Quem está aqui</p>
+        </div>
 
-      </article>
-    </div>
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <span class="spark spark-a" aria-hidden="true">✦</span>
+            <span class="spark spark-b" aria-hidden="true">✦</span>
+            <img
+              src="/images/natalia-veber.jpg"
+              alt="Psicóloga Natalia Veber"
+              class="about-photo"
+            />
+          </div>
 
-  </div>
-</section>
+          <div class="about-content">
+            <h2>
+              Antes de ser uma profissional,
+              <span>existe uma pessoa escutando outra pessoa.</span>
+            </h2>
 
-<section id="faq" class="faq-section">
-  <div class="faq-side-label">
-    <span>06</span>
-    <p>Perguntas</p>
-  </div>
+            <p>
+              A psicoterapia pode ser um espaço para olhar para aquilo que muitas
+              vezes parece difícil demais de compreender sozinho.
+            </p>
 
-  <div class="faq-content">
-    <p class="faq-label">Talvez você esteja se perguntando</p>
+            <p>
+              Não acredito em respostas prontas. Acredito em construir, junto
+              com cada pessoa, um espaço onde seja possível olhar para a própria
+              história com mais cuidado.
+            </p>
 
-    <h2>
-      Algumas dúvidas também fazem parte <span>do começo.</span>
-    </h2>
+            <p>
+              Me interesso pelas histórias que a gente conta sobre si e também
+              pelas que carrega sem perceber. É por isso que meu trabalho olha
+              para cada pessoa dentro dos vínculos e contextos que fazem parte
+              da sua trajetória.
+            </p>
 
-    <div class="faq-list">
-      <details>
-        <summary>Como funciona a primeira sessão?</summary>
-        <p>
-          A primeira sessão é um espaço inicial de escuta e compreensão.
-          Você não precisa chegar com tudo organizado ou sabendo exatamente
-          o que dizer.
-        </p>
-      </details>
+            <div class="about-details">
+              <span>CRP 08/49156</span>
+              <span>Atendimento on-line e presencial</span>
+              <span>10+ • Adolescentes • Adultos</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <details>
-        <summary>Quanto tempo dura uma sessão?</summary>
-        <p>
-          50
-        </p>
-      </details>
+      <section id="abordagem" class="approach-section">
+        <div class="approach-heading">
+          <p class="section-number">03</p>
+          <p class="section-label">Como trabalho</p>
+        </div>
 
-      <details>
-        <summary>Com que frequência acontece a psicoterapia?</summary>
-        <p>
-          A frequência é conversada de acordo com o processo e as necessidades
-          de cada pessoa.
-        </p>
-      </details>
+        <h2>
+          A dor não acontece
+          <span>fora do contexto.</span>
+        </h2>
 
-      <details>
-        <summary>Onde são realizados os atendimentos?</summary>
-        <p>
-          Os atendimentos são realizados on-line e presencialmente em Campo Largo.
-        </p>
-      </details>
-    </div>
-  </div>
-</section>
+        <div class="approach-layout">
+          <div class="approach-copy">
+            <p class="approach-lead">
+              Na abordagem sistêmica, aquilo que uma pessoa sente não é visto de
+              forma isolada.
+            </p>
 
-<section id="contato" class="contact-section">
-  <p class="contact-kicker">Talvez seja por aqui.</p>
+            <p>
+              Histórias, vínculos, relações familiares, experiências e contextos
+              também fazem parte da maneira como compreendemos o que está
+              acontecendo.
+            </p>
 
-  <h2>
-    Você não precisa ter todas as respostas <span>para começar uma conversa.</span>
-  </h2>
+            <p>
+              Isso não significa procurar culpados. Significa ampliar o olhar
+              para compreender como determinadas experiências foram sendo
+              construídas ao longo da vida.
+            </p>
 
-  <p>
-    Se quiser entender melhor como funciona o atendimento, você pode entrar
-    em contato.
-  </p>
+            <p class="approach-closing">
+              Compreender o contexto não apaga a dor. Mas muda a forma como a
+              gente aprende a carregá-la.
+            </p>
+          </div>
 
-  <div class="contact-details">
-  <div>
-    <span>Atendimento</span> <strong>On-line e presencial</strong>
-  </div>
+          <div class="system-map" aria-label="Diagrama da abordagem sistêmica">
+            <span class="map-ring map-ring-outer" aria-hidden="true"></span>
+            <span class="map-ring map-ring-inner" aria-hidden="true"></span>
 
-  <div>
-    <span>Locais</span> <strong>Campo Largo • Curitiba</strong>
-  </div>
+            <strong>Você</strong>
 
-  <div>
-    <span>Duração</span> <strong>50 minutos</strong>
-  </div>
+            <span class="map-pill map-history">História</span>
+            <span class="map-pill map-bonds">Vínculos</span>
+            <span class="map-pill map-relations">Relações</span>
+            <span class="map-pill map-context">Contexto</span>
+            <span class="map-pill map-experiences">Experiências</span>
 
-  <div>
-    <span>Para quem</span> <strong>Crianças a partir de 10 anos • Adolescentes • Adultos</strong>
-  </div>
-</div>
+            <span class="map-star star-one" aria-hidden="true">✦</span>
+            <span class="map-star star-two" aria-hidden="true">✦</span>
+          </div>
+        </div>
+      </section>
 
-<a
-  href="https://wa.me/554799699634?text=Olá%2C%20Natalia.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
-  class="contact-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Conversar pelo WhatsApp
-</a>
-</section>
+      <section id="atendimento" class="care-section">
+        <div class="care-heading">
+          <p class="section-number">04</p>
+          <p class="section-label">Atendimento</p>
+        </div>
 
+        <div class="care-title">
+          <h2>Um espaço para começar no seu tempo.</h2>
+          <p>A psicoterapia é construída encontro por encontro.</p>
+        </div>
+
+        <div class="care-grid">
+          <article class="care-card care-card-light">
+            <span class="care-icon" aria-hidden="true">✉</span>
+            <p class="care-index">01</p>
+            <h3>Primeiro contato</h3>
+            <p>
+              Você pode entrar em contato para tirar dúvidas e entender melhor
+              como funciona o atendimento.
+            </p>
+            <span class="care-decoration" aria-hidden="true">✦</span>
+          </article>
+
+          <article class="care-card care-card-yellow">
+            <span class="care-icon" aria-hidden="true">○</span>
+            <p class="care-index">02</p>
+            <h3>Primeira sessão</h3>
+            <p>
+              Um primeiro espaço de escuta para compreender o que está trazendo
+              você até a psicoterapia neste momento.
+            </p>
+            <span class="care-decoration care-heart" aria-hidden="true">♡</span>
+          </article>
+
+          <article class="care-card care-card-blue">
+            <span class="care-icon care-icon-coral" aria-hidden="true">↻</span>
+            <p class="care-index">03</p>
+            <h3>Continuidade</h3>
+            <p>
+              A frequência e o processo são construídos de acordo com as
+              necessidades de cada pessoa.
+            </p>
+            <span class="care-decoration" aria-hidden="true">✧</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="reflexoes" class="journal-section">
+        <div class="journal-heading-row">
+          <div>
+            <p class="section-number">05</p>
+            <p class="section-label">Reflexões</p>
+          </div>
+          <span class="journal-flower-mark" aria-hidden="true">✿</span>
+        </div>
+
+        <h2>Textos para ficar um pouco.</h2>
+
+        <div class="journal-grid">
+          <article class="journal-card journal-card-cream">
+            <p class="journal-meta">Relacionamentos • 6 min</p>
+            <h3>Existe uma diferença entre ouvir e realmente escutar.</h3>
+            <p>
+              Nem sempre o que falta em uma conversa é resposta. Às vezes, falta
+              espaço para que aquilo que sentimos consiga realmente existir.
+            </p>
+            <a href="#escutar">Ler reflexão →</a>
+            <span class="journal-shape" aria-hidden="true"></span>
+          </article>
+
+          <article class="journal-card journal-card-coral">
+            <p class="journal-meta">Ansiedade • 5 min</p>
+            <h3>Quando a mente não encontra um lugar para descansar.</h3>
+            <p>
+              A ansiedade nem sempre aparece como medo. Às vezes ela se esconde
+              na pressa, no excesso de pensamentos e na dificuldade de parar.
+            </p>
+            <a href="#contato">Ler reflexão →</a>
+            <span class="journal-shape" aria-hidden="true"></span>
+          </article>
+
+          <article class="journal-card journal-card-yellow">
+            <p class="journal-meta">Autoconhecimento • 7 min</p>
+            <h3>Nem tudo o que se repete acontece por acaso.</h3>
+            <p>
+              Alguns padrões parecem familiares porque, de alguma forma, fazem
+              parte da história que aprendemos a viver.
+            </p>
+            <a href="#abordagem">Ler reflexão →</a>
+            <span class="journal-shape" aria-hidden="true"></span>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section">
+        <div class="faq-intro">
+          <p class="section-number">06</p>
+          <p class="section-label">Perguntas</p>
+          <h2>Algumas dúvidas também fazem parte do começo.</h2>
+          <p>
+            Você não precisa chegar sabendo como tudo funciona. Algumas
+            informações podem ajudar a tornar esse primeiro passo mais simples.
+          </p>
+          <span class="faq-sticker">+ Talvez você esteja se perguntando...</span>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>
+              Como funciona a primeira sessão?
+              <span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              A primeira sessão é um espaço inicial de escuta e compreensão.
+              Você não precisa chegar com tudo organizado ou sabendo exatamente
+              o que dizer.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Quanto tempo dura uma sessão?
+              <span aria-hidden="true">+</span>
+            </summary>
+            <p>As sessões têm duração de 50 minutos.</p>
+          </details>
+
+          <details>
+            <summary>
+              Com que frequência acontece a psicoterapia?
+              <span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              A frequência é conversada de acordo com o processo e as
+              necessidades de cada pessoa.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Onde são realizados os atendimentos?
+              <span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Os atendimentos podem ser on-line e também presenciais em Campo
+              Largo e Curitiba.
+            </p>
+          </details>
+        </div>
+
+        <span class="faq-petal faq-petal-a" aria-hidden="true"></span>
+        <span class="faq-petal faq-petal-b" aria-hidden="true"></span>
+      </section>
+
+      <section id="contato" class="contact-section">
+        <img
+          src="/images/flor-hero.png"
+          alt=""
+          class="contact-flower contact-flower-left"
+          aria-hidden="true"
+        />
+        <img
+          src="/images/flor-hero.png"
+          alt=""
+          class="contact-flower contact-flower-right"
+          aria-hidden="true"
+        />
+
+        <div class="contact-inner">
+          <p class="contact-kicker">Talvez seja por aqui.</p>
+
+          <h2>
+            Você não precisa ter todas as respostas para
+            <span>começar uma conversa.</span>
+          </h2>
+
+          <p class="contact-copy">
+            Se quiser entender melhor como funciona o atendimento, você pode
+            entrar em contato.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <span>Atendimento</span>
+              <strong>On-line e presencial</strong>
+            </div>
+            <div>
+              <span>Locais</span>
+              <strong>Campo Largo • Curitiba</strong>
+            </div>
+            <div>
+              <span>Duração</span>
+              <strong>50 minutos</strong>
+            </div>
+            <div>
+              <span>Para quem</span>
+              <strong>10+ • Adolescentes • Adultos</strong>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/554799699634?text=Olá%2C%20Natalia.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+            class="contact-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conversar pelo WhatsApp
+          </a>
+        </div>
+      </section>
     </main>
 
-	<Footer />
+    <Footer />
   </body>
 </html>
-
-<style>
-
-																					
-
-</style>
