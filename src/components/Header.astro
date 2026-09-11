@@ -1,10 +1,22 @@
 <header class="site-header">
-  <a href="/" class="brand">
-    <span class="brand-symbol">✿</span>
+  <a href="#inicio" class="brand" aria-label="Natt! Psicóloga — início">
+    <svg
+      class="brand-flower"
+      viewBox="0 0 40 40"
+      aria-hidden="true"
+    >
+      <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+        <ellipse cx="20" cy="10.5" rx="5.4" ry="9" />
+        <ellipse cx="20" cy="10.5" rx="5.4" ry="9" transform="rotate(72 20 20)" />
+        <ellipse cx="20" cy="10.5" rx="5.4" ry="9" transform="rotate(144 20 20)" />
+        <ellipse cx="20" cy="10.5" rx="5.4" ry="9" transform="rotate(216 20 20)" />
+        <ellipse cx="20" cy="10.5" rx="5.4" ry="9" transform="rotate(288 20 20)" />
+      </g>
+    </svg>
 
-    <span class="brand-text">
-      <span class="brand-name">Natt!</span>
-      <span class="brand-description">Psicóloga</span>
+    <span class="brand-copy">
+      <strong>Natt!</strong>
+      <small>Psicóloga</small>
     </span>
   </a>
 
@@ -15,7 +27,9 @@
     aria-expanded="false"
     aria-controls="main-navigation"
   >
-    Menu ☰
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 
   <nav
@@ -23,7 +37,8 @@
     class="navigation"
     aria-label="Navegação principal"
   >
-    <a href="#sobre">Quem sou</a>
+    <a href="#inicio">Início</a>
+    <a href="#quem-sou">Quem sou</a>
     <a href="#abordagem">Como trabalho</a>
     <a href="#reflexoes">Reflexões</a>
     <a href="#contato">Contato</a>
@@ -34,20 +49,24 @@
   const menuButton = document.querySelector(".mobile-menu-button");
   const navigation = document.querySelector(".navigation");
 
-  if (menuButton && navigation) {
+  if (menuButton instanceof HTMLButtonElement && navigation instanceof HTMLElement) {
+    const closeMenu = () => {
+      navigation.classList.remove("navigation-open");
+      menuButton.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Abrir menu");
+    };
+
     menuButton.addEventListener("click", () => {
       const isOpen = navigation.classList.toggle("navigation-open");
 
+      menuButton.classList.toggle("is-open", isOpen);
       menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.textContent = isOpen ? "Fechar ✕" : "Menu ☰";
+      menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
     });
 
     navigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navigation.classList.remove("navigation-open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "Menu ☰";
-      });
+      link.addEventListener("click", closeMenu);
     });
   }
 </script>
@@ -55,119 +74,152 @@
 <style>
   .site-header {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    padding: 1.4rem 5%;
+    inset: 0 0 auto;
+    z-index: 1000;
+    min-height: 88px;
+    padding: 0 6%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-
     background: rgba(248, 241, 228, 0.96);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(37, 78, 130, 0.1);
+    backdrop-filter: blur(14px);
   }
 
- .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: #315d91;
-  text-decoration: none;
-}
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #254e82;
+    text-decoration: none;
+  }
 
-.brand-symbol {
-  color: #ef5d62;
-  font-size: 2rem;
-  line-height: 1;
-}
+  .brand-flower {
+    width: 38px;
+    height: 38px;
+    color: #f36c62;
+    overflow: visible;
+  }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+  .brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
 
-.brand-name {
-  font-size: 1.65rem;
-  font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-}
+  .brand-copy strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.72rem;
+    letter-spacing: -0.04em;
+  }
 
-.brand-description {
-  color: #ef5d62;
-  font-size: 0.58rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-}
+  .brand-copy small {
+    margin-top: 0.18rem;
+    color: #f36c62;
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
 
- .navigation {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  .navigation {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.7rem);
+    transform: translateX(-50%);
   }
 
   .navigation a {
-  color: #173c66;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.25s ease;
-}
-
-.navigation a:hover {
-  color: #ef5d62;
-}
-
-  .header-button {
-    padding: 0.75rem 1.2rem;
-    border-radius: 999px;
-    background: #3a6d5e;
-    color: #efe9dd;
+    position: relative;
+    padding: 0.5rem 0;
+    color: #18395e;
     text-decoration: none;
-    font-size: 0.85rem;
-    transition: transform 0.25s ease;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.94rem;
   }
 
-  .header-button:hover {
-    transform: translateY(-2px);
+  .navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 2px;
+    background: #f36c62;
+    transition: right 0.2s ease;
+  }
+
+  .navigation a:hover::after,
+  .navigation a:focus-visible::after {
+    right: 0;
   }
 
   .mobile-menu-button {
     display: none;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 9px;
     border: 0;
     background: transparent;
-    color: #000;
-    font: inherit;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     cursor: pointer;
   }
 
-  @media (max-width: 800px) {
+  .mobile-menu-button span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 6px 0;
+    background: #254e82;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .mobile-menu-button.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-menu-button.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-button.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  @media (max-width: 760px) {
     .site-header {
-      padding: 1.2rem 6%;
-      flex-wrap: wrap;
+      min-height: 72px;
+      padding: 0 5.5%;
+    }
+
+    .brand-flower {
+      width: 32px;
+      height: 32px;
+    }
+
+    .brand-copy strong {
+      font-size: 1.45rem;
     }
 
     .mobile-menu-button {
       display: block;
-      margin-left: auto;
     }
 
     .navigation {
-      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
       width: 100%;
+      display: none;
+      transform: none;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       gap: 0;
-      padding: 1.5rem 0 0.5rem;
+      padding: 0.8rem 5.5% 1.2rem;
+      background: #f8f1e4;
+      border-bottom: 1px solid rgba(37, 78, 130, 0.12);
+      box-shadow: 0 16px 30px rgba(37, 78, 130, 0.08);
     }
 
     .navigation.navigation-open {
@@ -175,16 +227,17 @@
     }
 
     .navigation a {
-      width: 100%;
       padding: 1rem 0;
-      font-size: 1.05rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 1.08rem;
+      border-bottom: 1px solid rgba(37, 78, 130, 0.09);
     }
 
-    .brand {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.1rem;
+    .navigation a:last-child {
+      border-bottom: 0;
+    }
+
+    .navigation a::after {
+      display: none;
     }
   }
 </style>
